@@ -1,0 +1,46 @@
+{
+  "method": "v6_score_multimodel",
+  "complete": true,
+  "domain": "drugs",
+  "representation_id": "fe_gpt_schema_v2",
+  "csv": "similarity_database_fe_gpt_schema_v2.csv",
+  "model": "claude_sonnet_4_6",
+  "task": "binary_0",
+  "n_pairs": 100,
+  "n_valid": 100,
+  "n_failed": 0,
+  "preds_csv": "<WORKSPACE>/new_try/experiments/v6_final/drugs/results_drugs/similarity_database_fe_gpt_schema_v2_v6score_claude_sonnet_4_6_binary_0_preds.csv",
+  "best_threshold": 34.1709,
+  "global_best": {
+    "f1": 0.9136,
+    "accuracy": 0.93,
+    "precision": 0.8409,
+    "recall": 1.0,
+    "tp": 37,
+    "fp": 7,
+    "fn": 0,
+    "tn": 56
+  },
+  "loo": {
+    "accuracy": 0.92,
+    "f1": 0.9024,
+    "precision": 0.8222,
+    "recall": 1.0,
+    "cm": [
+      [
+        55,
+        8
+      ],
+      [
+        0,
+        37
+      ]
+    ]
+  },
+  "score_stats": {
+    "mean": 41.51,
+    "std": 27.62,
+    "pos_mean": 72.54,
+    "neg_mean": 23.29
+  }
+}

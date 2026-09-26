@@ -1,0 +1,16 @@
+# Analysis (recomputing tables and figures from stored outputs)
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.3
+statsmodels>=0.14
+matplotlib>=3.8
+openpyxl>=3.1
+rank-bm25>=0.2
+tqdm
+# LLM calls (only for regenerating stored outputs)
+openai>=1.30
+anthropic>=0.30
+python-dotenv
+# Embedding training (scripts/7_sentencing_range/embeddings)
+# torch, sentence-transformers, transformers: see scripts/7_sentencing_range/embeddings/requirements.txt
