@@ -1,7 +1,7 @@
-# Expert Schemas Beat Raw Facts: Validating LLM Case Similarity for Israeli Sentencing Ranges
+# Validating LLM-Based Case Similarity for Sentencing-Range Determination in Hebrew Criminal Law
 
 Code, data and results for the manuscript submitted to *Artificial Intelligence and Law*.
-Everything the paper reports (Tables 1–23, Figures 1–7, Online Resource 1) is derived from the files in this repository. No API call is needed to recompute any table or figure; API calls are needed only to regenerate the LLM outputs themselves (feature extraction, pairwise similarity scores, explanations), which are all stored here.
+Everything the paper reports (Tables 1–22, Figures 1–7, Online Resource 1) is derived from the files in this repository. No API call is needed to recompute any table or figure; API calls are needed only to regenerate the LLM outputs themselves (feature extraction, pairwise similarity scores, explanations), which are all stored here.
 
 The repository is anonymised for review: annotators appear as A1–A7, workspace paths are replaced by `<WORKSPACE>`, and no author information is included.
 
@@ -18,8 +18,9 @@ data/
   extraction_validation/ manual ground truth and automatic extraction outputs used for Table 8
   citation_classifier/   573 labelled paragraphs (54 judgments), tokenizer, config, threshold
   range_corpus/          corpus_4432.csv (verdict, domain, indictment_facts, sentencing_range_low/high,
-                         months); llm_pair_scores_254952.csv (all GPT-4.1 pairwise scores over the
-                         candidate pool, Hybrid-Full representation); master_inventory.csv;
+                         months); llm_pair_scores_452225.csv (the union of all GPT-4.1 pairwise scores
+                         used by the prediction methods, Hybrid-Full representation; 452,225
+                         unique pairs over six scoring batches); master_inventory.csv;
                          citation_network/ (edges, pair types, node metrics);
                          embeddings/ (5-fold supervised DictaBERT and SimCSE verdict embeddings)
 results/
@@ -105,7 +106,7 @@ those paths to this repository is in `provenance/MANIFEST.csv` (source column).
 ## Regenerating LLM outputs
 
 Requires provider keys in `.env` (see `.env.example`). Model identifiers and access dates are in
-`scripts/3_similarity_scoring/model_config.py` and in Appendix B of the paper. Scoring is
+`scripts/3_similarity_scoring/model_config.py`. Scoring is
 deterministic in intent (temperature 0; 0.1 for GPT-4.1-mini extraction and the corpus-scale
 batches) but provider-side changes mean re-runs need not reproduce the stored outputs exactly.
 

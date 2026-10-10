@@ -118,3 +118,7 @@ citation+LLM MAE due to a K-neighbor selection/aggregation implementation differ
 
 ---
 Generated 2026-05-16, corpus-version fix 2026-05-17.
+
+
+## Note added 2026-10-10 (release check)
+The prediction scripts load the union of six score files (452,225 unique pairs), not only `similarity_scores_combined.csv` (254,952). The released repository ships that union as `data/range_corpus/llm_pair_scores_452225.csv`; with the 254,952 subset alone, M8 weapon lower-bound MAE comes out 13.35 instead of the reported 12.97. Verified 2026-10-10: M5, M8, M10 reproduce exactly from the released files; M7 reproduces up to tie order (12.34 vs 12.39).
