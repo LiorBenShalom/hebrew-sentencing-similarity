@@ -26,7 +26,7 @@ data/
 results/
   similarity/            per-configuration metrics (cells_n13.csv: 7 reps x 13 LLMs x 2 domains),
                          summary_qwk_n13.csv (Table 10), contrasts48.csv (Table 11 / 47 of 48),
-                         pairwise_21x8_fdr.csv (Online Resource 1), baselines/ (Table 14),
+                         pairwise_21x8_fdr.csv (Online Resource 1), baselines/ (Table 14; text baselines + pair-level tests, Table B5),
                          confusion_3way/ (Figure 3), figures/ (CLDs, Figure 2),
                          llm_predictions/ (raw per-pair LLM outputs for all 182 configurations)
   explainability/        first_pass_claude_opus/ (Claude Opus 4.7 ratings), second_pass_blind/

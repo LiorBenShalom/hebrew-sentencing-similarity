@@ -1,0 +1,9 @@
+score,drugs,weapon
+BGE-M3,0.667,0.428
+BM25,0.384,0.268
+Gemini-embedding-001,0.738,0.45
+LLM on Manual (mean of 13),0.789,0.772
+LLM on Raw-Facts (mean of 13),0.728,0.673
+OpenAI text-embedding-3-large,0.511,0.239
+Qwen3-Embedding-8B,0.733,0.439
+mE5-large-instruct,0.642,0.393
